@@ -1,33 +1,13 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 
 import * as S from "./Styles";
 
 export const Header = () => {
-  const [scrolled, setScrolled] = useState(false);
   const [active, setActive] = useState(false);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const screenHeight = window.innerHeight;
-      const targetInnerHeightPercentage = 85;
-
-      const targetInnerHeight =
-        (targetInnerHeightPercentage / 100) * screenHeight;
-
-      const isScrolled = window.scrollY > targetInnerHeight;
-      setScrolled(isScrolled);
-    };
-
-    window.addEventListener("scroll", handleScroll);
-
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
-
   return (
-    <S.Header scrolled={scrolled} active={active} >
+    <S.Header active={active}>
       <S.HeaderContainer>
         <S.Links>
           {" "}
@@ -45,6 +25,7 @@ export const Header = () => {
           </a>
         </S.Links>
         <h1>Larissa Fernandes</h1>
+
         <S.Nav className={active ? "active" : ""}>
           <S.MobileMenu
             onClick={() => setActive((boolean) => !boolean)}

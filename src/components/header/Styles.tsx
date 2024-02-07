@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import { theme } from "../../theme/Index";
 
-export const Header = styled.header<{ scrolled: boolean; active: boolean }>`
+export const Header = styled.header<{ active: boolean }>`
   z-index: 100;
   width: 100%;
   position: fixed;
@@ -103,6 +103,7 @@ export const Nav = styled.nav`
       a {
         color: ${theme.colors.white};
         font-weight: 400;
+        font-size: 1.5rem;
       }
     }
   }
@@ -150,7 +151,8 @@ export const HeaderList = styled.ul`
     position: absolute;
     right: 0;
     top: 0px;
-    background: rgba(83, 83, 83, 0.5);
+    /* background: rgba(83, 83, 83, 0.5); */
+    background: rgba(24, 23, 23, 0.5);
     height: 0;
     transition: all 0.6s;
 

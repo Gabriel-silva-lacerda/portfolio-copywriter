@@ -1,6 +1,7 @@
 import * as S from "./Styles";
 import { FaFilePdf } from "react-icons/fa";
 import { useScrollAnimation } from "../../../hooks/useScrollAnimation";
+import Curriculum from "../../../curriculum/Curriculo Larissa.pdf";
 
 export const Certificate = () => {
   const { ref, controls } = useScrollAnimation();
@@ -43,7 +44,7 @@ export const Certificate = () => {
           Por favor, clique no botão abaixo para iniciar o download e ter acesso
           ao meu currículo:
         </p>
-        <a href="/caminho/do/arquivo/arquivo.txt" download>
+        <a href={Curriculum} download>
           Currículo <FaFilePdf />
         </a>
       </S.DownLoadContainer>

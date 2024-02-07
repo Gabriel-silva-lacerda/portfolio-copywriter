@@ -1,10 +1,9 @@
 import styled from "styled-components";
 import BackGround01 from "../../../assets/about-me.png";
 import BackGround02 from "../../../assets/work.png";
-
 import BackGround03 from "../../../assets/formation.png";
-import BackGround04 from "../../../assets/group02.png";
-import BackGround05 from "../../../assets/group.png";
+import BackGround04 from "../../../assets/phone-contact.png";
+import BackGround05 from "../../../assets/feature-image.png";
 import { theme } from "../../../theme/Index";
 import { motion } from "framer-motion";
 
