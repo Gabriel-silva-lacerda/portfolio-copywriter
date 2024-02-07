@@ -6,12 +6,6 @@ export const Header = styled.header<{ scrolled: boolean; active: boolean }>`
   width: 100%;
   position: fixed;
   top: 0;
-
-  /* background: ${({ scrolled, active }) =>
-    scrolled || active ? "#0f2167" : "transparent"};
-
-  box-shadow: ${({ scrolled, active }) =>
-    scrolled || active ? "0 1px 1px #0000001a" : "initail"}; */
   border-bottom: 3px solid ${theme.colors.primary};
   background: ${theme.colors.white};
 `;
@@ -25,6 +19,7 @@ export const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 
   h1 {
     font-size: 1.7rem;
@@ -41,24 +36,29 @@ export const HeaderContainer = styled.div`
   }
 `;
 
-export const Logo = styled.a`
-  border: none;
-  background: ${theme.colors.primary};
-  cursor: pointer;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
+export const Links = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
-  transition: 0.3s;
-  z-index: -1;
-  &:hover {
-    background: #2d6a4f;
-  }
+  gap: 0.8rem;
 
-  svg {
-    color: ${theme.colors.white};
+  a {
+    background: ${theme.colors.primary};
+    cursor: pointer;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+
+    &:hover {
+      background: ${theme.colors.hover};
+    }
+
+    svg {
+      color: ${theme.colors.white};
+      font-size: 1.2rem;
+    }
   }
 `;
 
@@ -101,7 +101,7 @@ export const Nav = styled.nav`
 
     &.active {
       a {
-        color: white;
+        color: ${theme.colors.white};
         font-weight: 400;
       }
     }
@@ -159,35 +159,6 @@ export const HeaderList = styled.ul`
     transform: translate(-20px);
     opacity: 0;
     z-index: -1;
-  }
-`;
-
-export const ButtonContact = styled.li`
-  text-transform: uppercase;
-  font-family: "Roboto";
-  color: ${theme.colors.white};
-  border: 1px solid ${theme.colors.white};
-  display: block;
-  padding: 0.8rem 2rem;
-  transition: all 0.3s;
-  background: #0f2167c5;
-  padding: 0;
-
-  transition: all 0.3s;
-
-  &:hover {
-    background: ${theme.colors.white};
-
-    border-color: ${theme.colors.blue};
-  }
-
-  a {
-    padding: 0.6rem 2rem !important;
-    display: block;
-
-    &:hover {
-      color: ${theme.colors.blue};
-    }
   }
 `;
 

@@ -2,9 +2,9 @@ export const theme = {
   colors: {
     primary: "#40916C",
     lightYeloow: "#f2c36b",
-    blue: "#0f2167",
+    background: "#dae2dc4e",
     white: "#FFF",
-    blueBackgroudImage: "#0f2167c5",
+    hover: "#52B788",
     textColor: "#081C15",
     textColorTwo: "#081c15",
   },

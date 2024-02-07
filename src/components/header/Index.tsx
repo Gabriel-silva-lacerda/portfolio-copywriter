@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FaLinkedinIn } from "react-icons/fa";
+import { FaWhatsapp, FaInstagram } from "react-icons/fa";
 
 import * as S from "./Styles";
 
@@ -27,12 +27,23 @@ export const Header = () => {
   }, []);
 
   return (
-    <S.Header scrolled={scrolled} active={active}>
+    <S.Header scrolled={scrolled} active={active} >
       <S.HeaderContainer>
-        <S.Logo href="home">
+        <S.Links>
           {" "}
-          <FaLinkedinIn />
-        </S.Logo>
+          <a
+            href="https://api.whatsapp.com/send?phone=5511948687917"
+            target="_blank"
+          >
+            <FaWhatsapp />
+          </a>
+          <a
+            href="https://www.instagram.com/laariofc?igsh=aGh2ODhsc2c5dWpj&utm_source=qr"
+            target="_blank"
+          >
+            <FaInstagram />
+          </a>
+        </S.Links>
         <h1>Larissa Fernandes</h1>
         <S.Nav className={active ? "active" : ""}>
           <S.MobileMenu
