@@ -12,7 +12,7 @@ export const Header = () => {
         <S.Links>
           {" "}
           <a
-            href="https://api.whatsapp.com/send?phone=5511948687917"
+            href="https://wa.me/5511952331104"
             target="_blank"
           >
             <FaWhatsapp />
